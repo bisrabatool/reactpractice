@@ -1,20 +1,21 @@
-// import logo from './logo.svg';
-import { Container } from 'react-bootstrap'
-import './App.css'
-import React from 'react'
+// // import logo from './logo.svg';
 
-function App() {
-  return (
-    <Container>
-        <>
+// import './App.css'
+// import React from 'react'
+// import TypesExample from '../../mybutton'
+
+// function App() {
+//   return (
+    
+//         <>
         
-         <footer/>
-        </>
-    </Container>
-  )
-}
+//         <TypesExample/>
+//         </>
+   
+//   )
+// }
 
-export default App
+// export default App
 
 
 // import button from 'react';
@@ -108,3 +109,35 @@ export default App
 //     </>
 //   );
 // }
+import React, { useState } from "react";
+import ReactDOM from "react-dom/client";
+
+function FavoriteColor() {
+  const [color, setColor] = useState("red");
+
+  return (
+    <>
+      <h1>My favorite color is {color}!</h1>
+      <button
+        type="button"
+        onClick={() => setColor("blue")}
+      >Blue</button>
+      <button
+        type="button"
+        onClick={() => setColor("red")}
+      >Red</button>
+      <button
+        type="button"
+        onClick={() => setColor("pink")}
+      >Pink</button>
+      <button
+        type="button"
+        onClick={() => setColor("green")}
+      >Green</button>
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<FavoriteColor />);
+export default FavoriteColor;
